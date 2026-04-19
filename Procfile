@@ -1,2 +1,1 @@
-web: vendor/bin/heroku-php-apache2 public/
-web: php artisan config:clear && php artisan serve --host=0.0.0.0 --port=$PORT
+web: php artisan migrate --force && php artisan db:seed --force && vendor/bin/heroku-php-apache2 public/
