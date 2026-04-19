@@ -9,5 +9,9 @@ class Car extends Model
     protected $fillable = [
         'name', 'type', 'image_url', 'daily_price',
         'fine_pct_per_hour', 'seats', 'status',
-    ];
+        ];
+        public function bookings()
+{
+    return $this->hasMany(Booking::class);
+}
 }

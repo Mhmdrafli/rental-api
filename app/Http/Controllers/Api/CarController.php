@@ -59,6 +59,6 @@ class CarController extends Controller
     {
         $car = Car::findOrFail($id);
         $car->delete();
-        return response()->json(['ok' => true]);
+        return response()->json(['message' => 'Car deleted successfully']);
     }
 }
